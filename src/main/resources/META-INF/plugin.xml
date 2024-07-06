@@ -17,6 +17,15 @@
         <li>支持从外部复制Mybatis日志进行提取.</li>
     </ul>
 
+    usage:
+    <ol>
+        <li>Open the Mybatis Log Parser window.</li>
+        <li>Click the "Mybatis Log Console" tab to parse the log.</li>
+        <li>Click the "Mybatis Log Convert" tab to to convert the log.</li>
+    </ol>
+    <br>
+    </br>
+
     ]]></description>
 
     <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html

@@ -25,7 +25,7 @@ intellij {
 patchPluginXml {
     changeNotes = """
     <dl>
-        <dt>1.0.0</dt>
+        <dt>1.0</dt>
         <dd>持从控制台实时提取SQL.</dd>
         <dd>支持从外部复制Mybatis日志进行提取.</dd>
     </dl>
