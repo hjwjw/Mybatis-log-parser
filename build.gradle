@@ -1,0 +1,37 @@
+plugins {
+    id 'org.jetbrains.intellij' version '1.17.3'
+    id 'java'
+}
+
+group 'com.hjwei'
+version '1.0'
+
+sourceCompatibility = 11
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+// See https://github.com/JetBrains/gradle-intellij-plugin/
+intellij {
+    version = '2021.2.1'
+
+}
+patchPluginXml {
+    changeNotes = """
+    <dl>
+        <dt>1.0.0</dt>
+        <dd>持从控制台实时提取SQL.</dd>
+        <dd>支持从外部复制Mybatis日志进行提取.</dd>
+    </dl>
+      
+      """
+}
+test {
+    useJUnitPlatform()
+}

@@ -1,0 +1,36 @@
+<idea-plugin>
+    <id>com.hjwei.Mybatis-log-parser</id>
+    <name>Mybatis Log Parser</name>
+    <version>1.0</version>
+    <vendor email="jiangwei.huang@foxmail.com" url="https://github.com/hjwjw">HJWEI</vendor>
+
+    <description><![CDATA[
+    Extract full executable SQL from Mybatis logs
+    <ul>
+        <li>Support for real-time extraction of SQL from the console.</li>
+        <li>Support copying Mybatis logs from external sources for extraction.</li>
+    </ul>
+    <br>
+    从Mybatis日志提取完整可执行的SQL
+    <ul>
+        <li>支持从控制台实时提取SQL.</li>
+        <li>支持从外部复制Mybatis日志进行提取.</li>
+    </ul>
+
+    ]]></description>
+
+    <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <consoleFilterProvider implementation="com.hjwei.mybatis.filter.MyBatisLogConsoleFilterProvider"/>
+        <toolWindow factoryClass="com.hjwei.mybatis.factory.TabFactory" id="Mybatis Log Parser" secondary="false" anchor="bottom" icon="/icons/ibatis.svg"/>
+
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+</idea-plugin>
